@@ -1,26 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap");
 @import "tailwindcss";
 
+@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Montserrat", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
+  --font-jetBrains: "JetBrains Mono", "monospace";
+  --color-darkTheme: #11001f;
+  --color-gradiant: linear-gradient(to right, #54ffd1, #6a3de8);
+  --color-seaSalt: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  --color-darkHover: "#2a004a";
+  --color-lightHover: "#fcf4ff";
+}
+/* body,
+.nav-container,
+.card {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+} */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --main-purple: #663399;
+}
+.box {
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
+.grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.bg-gradiant {
+  background: linear-gradient(to right top, #54ffd1, #6a3de8);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .bg-seaSalt {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.hover\:bg-gradiant {
+  &:hover {
+    @media (hover: hover) {
+      background: linear-gradient(to right, #54ffd1, #6a3de8)
+        /* oklch(62.3% 0.214 259.815) */;
+    }
+  }
+}
+.bg-purple {
+  background-color: rgb(67 145 226 / 50%);
+}
+.text-blue {
+  color: rgb(111 67 226 / 100%);
+}
+.bg-blue {
+  background-color: rgb(111 67 226 / 50%);
+}
+.text-purple {
+  color: rgb(67 145 226 / 100%);
+}
+.large-icon {
+  font-size: 1.5rem;
+}
+@tailwind utilities;
+.bg-purple {
+  background-color: color-mix(in oklab, var(--main-purple) 80%, transparent);
 }
