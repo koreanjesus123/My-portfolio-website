@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 
 
-const Services = ({ }) => {
+const Services = ({ isDarkMode }) => {
     return (
         <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1}} className="w-full px-[12%] py-10 scroll-mt-20" id="services" >
             <motion.h4 initial={{y:20,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.5,delay:0.3}} className="text-center mb-2 text-lg font-montserrat">What I offer</motion.h4>
