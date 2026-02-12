@@ -15,7 +15,7 @@ const Header = ({ isDarkMode }) => {
                 web developer based in yangon.
             </motion.h1>
             <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:0.6,delay:0.7}} className="max-w-2xl mx-auto font-montserrat">
-                I am a frontend web developer from yangon with two years of experience in nextjs,typescrpit and laravel.
+                I am a frontend web developer from yangon with two years of experience in Nextjs,Typescript and Laravel.
             </motion.p>
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
                 <motion.a initial={{y:30,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.6,delay:1.2}} href="#contact" className="hover:bg-gradiant hover:translate-x-2 duration-500 px-4 py-3  rounded-full bg-darkTheme text-white  flex items-center gap-2 border border-white dark:text-black

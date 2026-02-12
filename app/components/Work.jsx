@@ -4,11 +4,11 @@ import { motion } from "motion/react";
 
 const Work = ({isDarkMode}) => {
     return (<motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1}} id='work' className="w-full px-[12%] py-10 scroll-mt-20">
-        <motion.h4 initial={{y:-20,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.5,delay:0.3}} className="text-center mb-2 text-lg font-montserrat">My portfolio</motion.h4>
-        <motion.h2 initial={{y:-20,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.5,delay:0.3}} className="text-center text-5xl font-montserrat">My latest Work</motion.h2>
-        <motion.p initial={{y:-20,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.5,delay:0.3}} className="text-center max-w-2xl mx-auto mt-5 mb-12 font-montserrat">
+        <motion.h4 initial={{y:-20,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.3,delay:0.2}} className="text-center mb-2 text-lg font-montserrat">My portfolio</motion.h4>
+        <motion.h2 initial={{y:-20,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.3,delay:0.3}} className="text-center text-5xl font-montserrat">My latest Work</motion.h2>
+        <motion.p initial={{y:-20,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.3,delay:0.3}} className="text-center max-w-2xl mx-auto mt-5 mb-12 font-montserrat">
             Welcome to my web development portfolio!Explore a collection of projects showcasing my expertise in font-end development. </motion.p>
-        <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:0.6,delay:0.9}} className="grid grid-cols-auto my-10 gap-6">{workData.map((project, index) => (
+        <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:0.3,delay:0.9}} className="grid grid-cols-auto my-10 gap-6">{workData.map((project, index) => (
             <motion.div whileHover={{scale:1.05}} transition={{duration:0.3}} key={index} className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
                 style={{ backgroundImage: `url(${project.bgImage})` }}>
                 <div className="bg-white w-9/12 rounded-md absolute bottom-5
@@ -20,7 +20,7 @@ flex items-center justify-center hover:bg-gradiant transition ml-25">
                             <Image src={assets.send_icon} alt="send_icon" className="w-5" /></div>
                     </div></div>
             </motion.div>))}</motion.div>
-        <motion.a initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:0.6,delay:1.1}} href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px]
+        <motion.a initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:0.3,delay:1.1}} href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px]
 border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-gradiant transition-transform duration-300 ease-in-out hover:translate-x-3
     dark:text-white dark:border-gray-200">Show more<Image src={isDarkMode ? assets.right_arrow_white : assets.dark_right_arrow} alt="Right arrow" className="w-4" /></motion.a>
     </motion.div>)
