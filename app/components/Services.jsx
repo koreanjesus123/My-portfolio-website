@@ -18,7 +18,7 @@ const Services = ({ isDarkMode }) => {
                     <h3 className="text-lg my-4 text-gray-700 dark:text-gray-100">{title}</h3>
                     <p className="text-sm text-gray-600 leading-5 dark:text-gray-300">{description}</p>
                     <a href={link} className="flex items-center gap-2 text-sm mt-5">Read more
-                        <Image alt="right-arrow" src={assets.right_arrow} className="w-4" />
+                        <Image alt="right-arrow" src={isDarkMode ? assets.right_arrow_white : assets.dark_right_arrow} className="w-4" />
                     </a></motion.div>))} </motion.div></motion.div>
     )
 }
